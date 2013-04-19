@@ -49,4 +49,4 @@ consider_DURING_as_SIMULTANEOUS = True
 to 
 consider_DURING_as_SIMULTANEOUS = False 
 
-## last updated: April 13, 2013. 1:54PM EST. 
+## last updated: April 18, 2013. 10:41PM EST. 
