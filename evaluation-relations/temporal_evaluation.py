@@ -181,24 +181,27 @@ def get_entity_rel(tlink):
     return words[1]+'\t'+words[2]+'\t'+words[3] 
 
 def total_relation_matched(A_tlinks, B_tlinks, B_relations, B_tg): 
-    count = 0 
-    for tlink in A_tlinks.split('\n'): 
-        if tlink.strip() == '': 
-            continue 
-        if debug >= 2: 
-            print tlink
-        x, y, rel = get_x_y_rel(tlink) 
-        foo = relation_to_timegraph.interval_rel_X_Y(x, y, B_tg, rel, 'evaluation')
-        if re.search(get_entity_rel(tlink.strip()), B_relations): 
-            count += 1 
-            if debug >= 2: 
-                print 'True' 
-            continue 
-        if debug >= 2: 
-            print x, y, rel, foo[1]
-        if re.search('true', foo[1]):
-            count += 1 
-    return count 
+	count = 0 
+	for tlink in A_tlinks.split('\n'): 
+		if tlink.strip() == '': 
+			continue 
+		if debug >= 3: 
+			print tlink
+		x, y, rel = get_x_y_rel(tlink) 
+		foo = relation_to_timegraph.interval_rel_X_Y(x, y, B_tg, rel, 'evaluation')
+		if re.search(get_entity_rel(tlink.strip()), B_relations): 
+			count += 1 
+			if debug >= 2: 
+				print x, y, rel, 'True' 
+			continue 
+		if debug >= 2: 
+			print x, y, rel, foo[1]
+		if re.search('true', foo[1]):
+			count += 1 
+		else: 
+			if debug >= 1.5: 
+				print x, y, rel, foo[1]	
+	return count 
            
 def total_implicit_matched(system_reduced, gold_reduced, gold_tg): 
     count = 0 

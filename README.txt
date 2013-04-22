@@ -1,4 +1,4 @@
-$ cd tools 
+$ cd tempeval3_toolkit
 
 > python TE3-evaluation.py gold_folder_or_file system_folder_or_filefile
 $ python TE3-evaluation.py data/gold data/system 
@@ -8,7 +8,9 @@ $ python TE3-evaluation.py data/gold data/system
 $ python TE3-evaluation.py data/gold data/system 0.5
 # with debug level 0.5, print DETAILED entity feature performance, e.g. class accuracy, precision, recall, etc.  
 $ python TE3-evaluation.py data/gold data/system 1  
-# based on the debug_level print debug information. also try debug level 2. 
+# based on the debug_level print debug information. 
+# running with debug level 2 will output the errors. for TLINKs, "True" means the relation could be verified from the given gold relation. "true" means, it is verified through the temporal closure, "false" means it is false according to gold relation's temporal closures, "UNKNOWN" means the gold cannot infer if the relation is wrong and there are not enough relations to infer it is wrong - it is counted as wrong. 
+# running with debug level 1.5, the system only outputs the errors and the performance. 
 # run with debug >= 1 to get normalization step errors. 
 
 > python TE3-evaluation.py gold_folder_or_file system_folder_or_filefile debug_level tmp_folder
@@ -49,4 +51,4 @@ consider_DURING_as_SIMULTANEOUS = True
 to 
 consider_DURING_as_SIMULTANEOUS = False 
 
-## last updated: April 18, 2013. 10:41PM EST. 
+## last updated: April 22, 2013. 
