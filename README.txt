@@ -1,3 +1,16 @@
+This toolkit is used to evaluate the TempEval-3 participants. It evaluates the extraction of temporal entities (events, temporal expressions) using entity-based evaluation. For temporal relations, it evaluates systems that extract temporal information from text. It uses temporal closure to reward relations that are equivalent but distinct. This metric measures the overall performance of systems with a single score, making comparison between different systems straightforward. The fast, scalable temporal closure implementation is based on Timegraph (Miller and Schubert, 1990). 
+
+
+Citation: If you use this temporal evaluation toolkit, please include the following citation in any resulting papers:
+
+UzZaman, N., Llorens, H., Derczynski, L., Verhagen, M., Allen, J.F. and Pustejovsky, J. (2013), SemEval-2013 Task 1: TempEval-3: Evaluating Events, Time Expressions, and Temporal Relations, Proceedings of the 7th International Workshop on Semantic Evaluation (SemEval 2013), in conjunction with the Second Joint Conference on Lexical and Computational Semantcis (*SEM 2013)
+
+Questions: naushad AT cs.rochester.edu 
+
+This toolkit is maintained at: https://github.com/naushadzaman/tempeval3_toolkit
+
+
+# USAGE: 
 $ cd tempeval3_toolkit
 
 > python TE3-evaluation.py gold_folder_or_file system_folder_or_filefile
@@ -51,4 +64,4 @@ consider_DURING_as_SIMULTANEOUS = True
 to 
 consider_DURING_as_SIMULTANEOUS = False 
 
-## last updated: April 22, 2013. 
+## last updated: April 25, 2013. 
