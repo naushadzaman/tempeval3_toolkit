@@ -9,6 +9,9 @@ Questions: naushad AT cs.rochester.edu
 
 This toolkit is maintained at: https://github.com/naushadzaman/tempeval3_toolkit
 
+TempEval-3 participants were evaluated using this version: 
+https://github.com/naushadzaman/tempeval3_toolkit/tree/7b2c18b93326ba07dde603a68198128810ba356a
+
 
 # USAGE: 
 $ cd tempeval3_toolkit
